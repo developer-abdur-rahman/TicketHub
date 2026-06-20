@@ -3,10 +3,22 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bcrypt": "^6.0.0",
+    "@types/body-parser": "^1.19.6",
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6",
+    "tsx": "^4.22.4"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.3.0",
+    "express": "^5.2.1"
   }
 }
