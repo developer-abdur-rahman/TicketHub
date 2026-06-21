@@ -3,15 +3,15 @@ kind: Ingress
 metadata:
   name: ingress-service
   annotations:
-    nginx.ingress.kubernetes.io/use-regex: 'true'
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   ingressClassName: nginx
   rules:
     - host: tickethub.dev
       http:
         paths:
-          - path: /api/users/me
-            pathType: Prefix
+          - path: /api/users(/|$)(.*)
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: auth-srv
